@@ -8,9 +8,9 @@
 #
 # 1. Se diseñaron e implementarion 2 microservicios ofrecidos por medio de un apiGateway, un servicio se comunica por un middleware gRPC y el otro por un middleware MOM, El servidor API Gateway, utilizará como comunicación principal con los servidores de los microservicios la comunicación gRPC, y en caso de fallo con estos servidores, deberá utilizar la comunicación MOM para enviar la solicitud
 #
-## 1.1. Que aspectos cumplió o desarrolló de la actividad propuesta por el profesor (requerimientos funcionales y no funcionales)
+## 1.1. Que se logro: Se diseñaron e implementaron correctamente todos los servicios y servidores propuestos, se utilizo una ip elastica para la entrada de solicitudes via HTTP.
 
-## 1.2. Que aspectos NO cumplió o desarrolló de la actividad propuesta por el profesor (requerimientos funcionales y no funcionales)
+## 1.2. Que falto: No fue posible implementar la repuesta del servidor #2 por fuera de la consola (En el apiGateway), de igual forma todo el sistema MOM funciona.
 
 # 2. información general de diseño de alto nivel, arquitectura, patrones, mejores prácticas utilizadas.
 
