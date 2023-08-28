@@ -6,13 +6,15 @@
 #
 # RETO #2 - Procesos comunicantes por API REST, RPC y MOM
 #
-# 1. Se diseñaron e implementarion 2 microservicios ofrecidos por medio de un apiGateway, un servicio se comunica por un middleware gRPC y el otro por un middleware MOM, El servidor API Gateway, utilizará como comunicación principal con los servidores de los microservicios la comunicación gRPC, y en caso de fallo con estos servidores, deberá utilizar la comunicación MOM para enviar la solicitud
+# 1. breve descripción de la actividad:
+Se diseñaron e implementarion 2 microservicios ofrecidos por medio de un apiGateway, un servicio se comunica por un middleware gRPC y el otro por un middleware MOM, El servidor API Gateway, utilizará como comunicación principal con los servidores de los microservicios la comunicación gRPC, y en caso de fallo con estos servidores, deberá utilizar la comunicación MOM para enviar la solicitud
 #
-## 1.1. Que se logro: Se diseñaron e implementaron correctamente todos los servicios y servidores propuestos, se utilizo una ip elastica para la entrada de solicitudes via HTTP.
+## 1.1. Que se logro: Se diseñaron e implementaron correctamente todos los servicios y servidores propuestos, se utilizo una ip elastica para la entrada de solicitudes via HTTP segun fue solicitado. Todo el sistema gRPC y MOM funcionan al igual que el apiGateway.
 
-## 1.2. Que falto: No fue posible implementar la repuesta del servidor #2 por fuera de la consola (En el apiGateway), de igual forma todo el sistema MOM funciona.
+## 1.2. Que falto: No fue posible implementar la repuesta del servidor #2 por fuera de la consola (En el apiGateway), de igual forma todo el sistema MOM funciona y el servidor 2 realiza las solicitudes.
 
 # 2. información general de diseño de alto nivel, arquitectura, patrones, mejores prácticas utilizadas.
+Se utilizo Flask para generar las respuestas del servidor por HTTP, se utilizaron 4 servidores de AWS de la siguiente manera: Un servidor como apiGateway con IP elasica, un servidor que recibe solicitudes por gRPC y las ejecute, un servidor corriendo RabbitMQ como servicio MOM, y un servidor #2 que ejecuta las solicitudes encoladas en el MOM.
 
 # 3. Descripción del ambiente de desarrollo y técnico: lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
 
