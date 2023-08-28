@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Archivos Buscados</title>
+</head>
+<body>
+    <h1>Archivos Buscados:</h1>
+    <ul>
+        {% for file in data.original_files %}
+            <li>{{ file }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h1>Archivos Encontrados:</h1>
+    <ul>
+        {% for file in data.found_files %}
+            <li>{{ file }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

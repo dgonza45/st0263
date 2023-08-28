@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package contrato;
+
+message FileRequest {
+    repeated string files = 1;
+}
+
+message FileResponse {
+    repeated string files_found = 1;
+}
+
+service FileList {
+    rpc ListFiles (Empty) returns (FileResponse);
+    
+}
+
+service FindFile {
+    rpc FindFiles (FileRequest) returns (FileResponse);
+}
+
+message Empty {}
