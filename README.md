@@ -6,9 +6,8 @@
 #
 # RETO #2 - Procesos comunicantes por API REST, RPC y MOM
 #
-# 1. breve descripción de la actividad
+# 1. Se diseñaron e implementarion 2 microservicios ofrecidos por medio de un apiGateway, un servicio se comunica por un middleware gRPC y el otro por un middleware MOM, El servidor API Gateway, utilizará como comunicación principal con los servidores de los microservicios la comunicación gRPC, y en caso de fallo con estos servidores, deberá utilizar la comunicación MOM para enviar la solicitud
 #
-<texto descriptivo>
 ## 1.1. Que aspectos cumplió o desarrolló de la actividad propuesta por el profesor (requerimientos funcionales y no funcionales)
 
 ## 1.2. Que aspectos NO cumplió o desarrolló de la actividad propuesta por el profesor (requerimientos funcionales y no funcionales)
