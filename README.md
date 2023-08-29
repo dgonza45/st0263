@@ -25,28 +25,29 @@ Debido a que todo el codigo esta escrito en python no es necesario compilar, sin
 sudo python3 -m grpc_tools.protoc -I ../protobufs --python_out=. --pyi_out=. --grpc_python_out=. ../protobufs/contrato.proto
 
 Como librerias adicionales se utilizaron las siguientes:
-- Flask: Carga y renderizado de las respuestas del servidor con .html. 
-- os: Se utilizo para el manejo y busqueda de archivos en el servidor.
-- grpc: Manejo de la mensajeria gRPC.
-- pika: Manejo de RabbitMQ (Comunicacion MOM).
+1. Flask: Carga y renderizado de las respuestas del servidor con .html. 
+2. os: Se utilizo para el manejo y busqueda de archivos en el servidor.
+3. grpc: Manejo de la mensajeria gRPC.
+4. pika: Manejo de RabbitMQ (Comunicacion MOM).
 
 Como configuracion de las variables de ambiente se utilizaron los siguientes codigos:
--export hostip = 172.31.46.195
--export hostport = 8080
--export grpcipport = 172.31.38.44:50051
--export rabbithost=34.201.203.162
--export user=user
--export password=password
+1. export hostip = 172.31.46.195
+2. export hostport = 8080
+3. export grpcipport = 172.31.38.44:50051
+4. export rabbithost=34.201.203.162
+5. export user=user
+6. export password=password
 
 Como configuracion de directorios tenemos el siguiente arbol de directorios:
 
-- reto2
-   - apiGateway
-       -protobufs
-       -src ( En esta carpeta se encuentra el archivo para iniciar el server "apiGateway.py" )
-          -templates
-   - gRPC
-      -protobufs
+1. reto2
+-apiGateway
+-protobufs
+-src ( En esta carpeta se encuentra el archivo para iniciar el server "apiGateway.py" )
+-templates
+
+-gRPC
+protobufs
       -src ( En esta carpeta se encuentra el archivo para iniciar el server "gRPC.py" )
       -serverFiles
    - server2
@@ -58,11 +59,10 @@ Como configuracion de directorios tenemos el siguiente arbol de directorios:
 # IP o nombres de dominio en nube o en la máquina servidor.
 Se utilizaron las siguientes direcciones IP:
 
-IP DE ENTRADA= 44.217.252.126 (Elastica)
-IP de rabbithost= 34.201.203.162 (Elastica)
-
-ip host privada = 172.31.46.195:8080
-ip grppc privada = 172.31.38.44:50051
+1. IP DE ENTRADA= 44.217.252.126 (Elastica)
+2. IP de rabbithost= 34.201.203.162 (Elastica)
+3. ip host privada = 172.31.46.195:8080
+4. ip grppc privada = 172.31.38.44:50051
 
 
 ## descripción y como se configura los parámetros del proyecto (ej: ip, puertos, conexión a bases de datos, variables de ambiente, parámetros, etc)
