@@ -65,7 +65,7 @@ Directorio: apiGateway
 3. ip host privada = 172.31.46.195:8080
 4. ip grppc privada = 172.31.38.44:50051
 #
-## Para correr el proyecto se deben primero configurar las variables de entorno que se muestran en la parte de arriba e importar todas las librerias, mas adelante solo el necesario correr cada uno los archivos .py en su respectivo servidor que tiene el mismo nombre. En caso de tener 4 servidores sin configurar, solo es necesario correr cada uno de los archivos de servidor en cada servidor y en el cuarto configurar utilizando docker un servidor para los mensajes de RabbitMQ
+Para correr el proyecto se deben primero configurar las variables de entorno que se muestran en la parte de arriba e importar todas las librerias, mas adelante solo el necesario correr cada uno los archivos .py en su respectivo servidor que tiene el mismo nombre. En caso de tener 4 servidores sin configurar, solo es necesario correr cada uno de los archivos de servidor en cada servidor y en el cuarto configurar utilizando docker un servidor para los mensajes de RabbitMQ
 
 
 ## Mini guia de como un usuario utilizaría el software o la aplicación
@@ -78,9 +78,10 @@ En caso de que el servidor gRPC no este disponible, la informacion se enviaria v
 #
 
 # referencias:
-
-## sitio1-url 
-## sitio2-url
-## url de donde tomo info para desarrollar este proyecto
+1. https://github.com/st0263eafit/st0263-232/tree/main/Laboratorio-RPC
+2. https://protobuf.dev/
+3. https://grpc.io/
+4. https://medium.com/better-programming/introduction-to-message-queue-with-rabbitmq-python-639e397cb668
+5. https://www.velotio.com/engineering-blog/grpc-implementation-using-python
 
 #### versión README.md -> 1.0 (2023-agosto)
