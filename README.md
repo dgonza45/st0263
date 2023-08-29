@@ -16,11 +16,11 @@ Se diseñaron e implementaron correctamente todos los servicios y servidores pro
 No fue posible implementar la repuesta del servidor #2 por fuera de la consola (En el apiGateway), de igual forma todo el sistema MOM funciona y el servidor 2 realiza las solicitudes.
 #
 # 2. información general de diseño de alto nivel, arquitectura, patrones, mejores prácticas utilizadas.
-## Se utilizo Flask para visualizar las respuestas del servidor utilizando HTTP, se crearon 4 servidores de AWS y se configuraron de la siguiente manera: Un servidor como apiGateway con IP elasica, un servidor que recibe solicitudes gRPC y las ejecute, un servidor corriendo RabbitMQ como servicio MOM, y un ultimo servidor que ejecuta las solicitudes encoladas en el MOM.
+ Se utilizo Flask para visualizar las respuestas del servidor utilizando HTTP, se crearon 4 servidores de AWS y se configuraron de la siguiente manera: Un servidor como apiGateway con IP elasica, un servidor que recibe solicitudes gRPC y las ejecute, un servidor corriendo RabbitMQ como servicio MOM, y un ultimo servidor que ejecuta las solicitudes encoladas en el MOM.
 #
 # 3. Descripción del ambiente de desarrollo y técnico: lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
 #
-## Debido a que todo el codigo esta escrito en python no es necesario compilar, sin embargo, el archivo .proto del gRPC si es necesario compilarlo para que funcione correctamente, esto se hace con el siguiente codigo:
+ Debido a que todo el codigo esta escrito en python no es necesario compilar, sin embargo, el archivo .proto del gRPC si es necesario compilarlo para que funcione correctamente, esto se hace con el siguiente codigo:
 #
 sudo python3 -m grpc_tools.protoc -I ../protobufs --python_out=. --pyi_out=. --grpc_python_out=. ../protobufs/contrato.proto
 #
@@ -40,7 +40,7 @@ sudo python3 -m grpc_tools.protoc -I ../protobufs --python_out=. --pyi_out=. --g
 #
 ## Como configuracion de directorios tenemos el siguiente arbol de directorios:
 #
-## Caperta Reto2
+# Caperta Reto2
 #
 # Directorio: apiGateway
 1.protobufs
