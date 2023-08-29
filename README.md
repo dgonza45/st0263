@@ -1,10 +1,10 @@
-# info de la materia: ST0263 <Tópicos Especiales en Telemática>
+## info de la materia: ST0263 <Tópicos Especiales en Telemática>
 #
-# Estudiante(s): Daniel Gonzalez Bernal, dgonza45@eafit.edu.co
+## Estudiante(s): Daniel Gonzalez Bernal, dgonza45@eafit.edu.co
 #
-# Profesor: Edwin Nelson Montoya Munera, emontoya@eafit.edu.com
+## Profesor: Edwin Nelson Montoya Munera, emontoya@eafit.edu.com
 #
-# RETO #2 - Procesos comunicantes por API REST, RPC y MOM
+## RETO #2 - Procesos comunicantes por API REST, RPC y MOM
 #
 ## 1. breve descripción de la actividad:
 Se diseñaron e implementarion 2 microservicios ofrecidos por medio de un apiGateway, un servicio se comunica por un middleware gRPC y el otro por un middleware MOM, El servidor API Gateway, utilizará como comunicación principal con los servidores de los microservicios la comunicación gRPC, y en caso de fallo con estos servidores, deberá utilizar la comunicación MOM para enviar la solicitud
@@ -15,10 +15,10 @@ Se diseñaron e implementaron correctamente todos los servicios y servidores pro
 ## 1.2. Que falto: 
 No fue posible implementar la repuesta del servidor #2 por fuera de la consola (En el apiGateway), de igual forma todo el sistema MOM funciona y el servidor 2 realiza las solicitudes.
 #
-# 2. información general de diseño de alto nivel, arquitectura, patrones, mejores prácticas utilizadas.
+## 2. información general de diseño de alto nivel, arquitectura, patrones, mejores prácticas utilizadas.
  Se utilizo Flask para visualizar las respuestas del servidor utilizando HTTP, se crearon 4 servidores de AWS y se configuraron de la siguiente manera: Un servidor como apiGateway con IP elasica, un servidor que recibe solicitudes gRPC y las ejecute, un servidor corriendo RabbitMQ como servicio MOM, y un ultimo servidor que ejecuta las solicitudes encoladas en el MOM.
 #
-# 3. Descripción del ambiente de desarrollo y técnico: lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
+## 3. Descripción del ambiente de desarrollo y técnico: lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
 #
  Debido a que todo el codigo esta escrito en python no es necesario compilar, sin embargo, el archivo .proto del gRPC si es necesario compilarlo para que funcione correctamente, esto se hace con el siguiente codigo:
 #
@@ -56,11 +56,10 @@ Directorio: apiGateway
 1. src ( En esta carpeta se encuentra el archivo para iniciar el server "server2.py" )
 2. serverFiles
 #
-# 4. Descripción del ambiente de EJECUCIÓN (en producción) lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
+#
+## 4. Descripción del ambiente de EJECUCIÓN (en producción) lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
 
-# IP o nombres de dominio en nube o en la máquina servidor.
-Se utilizaron las siguientes direcciones IP:
-
+## Se utilizaron las siguientes direcciones IP:
 1. IP DE ENTRADA= 44.217.252.126 (Elastica)
 2. IP del rabbitmq host= 34.201.203.162 (Elastica)
 3. ip host privada = 172.31.46.195:8080
