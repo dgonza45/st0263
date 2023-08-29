@@ -40,21 +40,21 @@ sudo python3 -m grpc_tools.protoc -I ../protobufs --python_out=. --pyi_out=. --g
 #
 ## Como configuracion de directorios tenemos el siguiente arbol de directorios:
 #
-# Caperta Reto2
+Caperta Reto2
 #
-# Directorio: apiGateway
-1.protobufs
-2.src ( En esta carpeta se encuentra el archivo para iniciar el server "apiGateway.py" )
-2.1 templates
+Directorio: apiGateway
+1. protobufs.
+2. src ( En esta carpeta se encuentra el archivo para iniciar el server "apiGateway.py" ).
+2.1. templates.
 #
-# Directorio: gRPC
-1.protobufs
-2.src ( En esta carpeta se encuentra el archivo para iniciar el server "gRPC.py" )
-3.serverFiles
+ Directorio: gRPC
+1. protobufs
+2. src ( En esta carpeta se encuentra el archivo para iniciar el server "gRPC.py" )
+3. serverFiles
 #
-# Directorio: server2
-1.src ( En esta carpeta se encuentra el archivo para iniciar el server "server2.py" )
-2.serverFiles
+ Directorio: server2
+1. src ( En esta carpeta se encuentra el archivo para iniciar el server "server2.py" )
+2. serverFiles
 #
 # 4. Descripción del ambiente de EJECUCIÓN (en producción) lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
 
