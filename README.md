@@ -58,26 +58,27 @@ Directorio: apiGateway
 #
 #
 ## 4. Descripción del ambiente de EJECUCIÓN (en producción) lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
-
+#
 ## Se utilizaron las siguientes direcciones IP:
 1. IP DE ENTRADA= 44.217.252.126 (Elastica)
 2. IP del rabbitmq host= 34.201.203.162 (Elastica)
 3. ip host privada = 172.31.46.195:8080
 4. ip grppc privada = 172.31.38.44:50051
+#
+## Para correr el proyecto se deben primero configurar las variables de entorno que se muestran en la parte de arriba e importar todas las librerias, mas adelante solo el necesario correr cada uno los archivos .py en su respectivo servidor que tiene el mismo nombre. En caso de tener 4 servidores sin configurar, solo es necesario correr cada uno de los archivos de servidor en cada servidor y en el cuarto configurar utilizando docker un servidor para los mensajes de RabbitMQ
 
 
-## descripción y como se configura los parámetros del proyecto (ej: ip, puertos, conexión a bases de datos, variables de ambiente, parámetros, etc)
-
-## como se lanza el servidor.
-
-## una mini guia de como un usuario utilizaría el software o la aplicación
-
-## opcionalmente - si quiere mostrar resultados o pantallazos 
-
-# 5. otra información que considere relevante para esta actividad.
+## Mini guia de como un usuario utilizaría el software o la aplicación
+#
+Para solicitar los servicios solo es necesario utilizar la herramienta Postman de la siguiente manera:
+1. GET a la direccion 44.217.252.126:8080/listar_archivos para listar todos los archivos en el servidor.
+2. POST a la direccion 44.217.252.126:8080/encontrar_archivos , en el body del mensaje se selecciona la opcion form-data, y en el formulario se llena en "key" con la palabra filelist y en "value" el nombre del archivo a mostrar, el servidor retornara entonces una lista de todos los archivos solicitados y otra lista de cuales de los archivos solicitados se encontraron copias en el servidor.
+#
+En caso de que el servidor gRPC no este disponible, la informacion se enviaria via MOM al servidor #2 que contiene copia de todos los archivos y retornara el resultado no por el archivo HTML sino por consola. Ademas mostrara por un HTML la informacion de que la solicitud se envio al MOM.
+#
 
 # referencias:
-<debemos siempre reconocer los créditos de partes del código que reutilizaremos, así como referencias a youtube, o referencias bibliográficas utilizadas para desarrollar el proyecto o la actividad>
+
 ## sitio1-url 
 ## sitio2-url
 ## url de donde tomo info para desarrollar este proyecto
