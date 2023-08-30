@@ -25,7 +25,7 @@ def encontrarqueue(ch, method, properties, body):
 def enviar_correo(response):
         context = ssl.create_default_context()
         subject = 'Respuesta MOM'
-        message = 'Error en el servicio gRPC, se tramito la solicitud via MOM, la  respuesta de la consulta es\n' + response
+        message = 'Error en el servicio gRPC, se tramito la solicitud via MOM, la  respuesta de la consulta es\n' + str(response)
         message = 'Subject: {}\n\n{}'.format(subject, message)
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls(context=context)
